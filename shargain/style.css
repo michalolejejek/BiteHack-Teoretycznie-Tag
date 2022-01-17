@@ -1,0 +1,134 @@
+body {
+    background-color: #1D1128;
+    color: #E5D4ED;
+}
+
+.popup-header {
+    display: flex;
+    justify-content: center;
+}
+
+.popup-header img {
+    height: 8rem;
+}
+
+.form-wrapper {
+    margin: 1rem;
+    font-size: 1rem;
+}
+
+.form-field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    width: 200px;
+}
+
+.form-input {
+    font: inherit;
+    color: inherit;
+    background-color: #8652B7;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+input[type=text].form-input, .form-input.channel, select.form-input {
+    border: 1px solid #E5D4ED;
+    width: 300px;
+}
+
+input[type="checkbox"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    /* Remove most all native input styles */
+    appearance: none;
+    /* For iOS < 15 */
+    background-color: #8652B7;
+    /* Not removed via appearance */
+    margin: 0;
+
+    font: inherit;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #E5D4ED;
+    border-radius: 0.15em;
+
+    display: grid;
+    place-content: center;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em #E5D4ED;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+
+button {
+    display: block;
+    border: none;
+    font: inherit;
+    color: inherit;
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+    background-color: #533073;
+    cursor: pointer;
+    margin: 1.5rem auto 0;
+    width: 150px;
+    box-shadow: 0 0 6px 0 #533073;
+}
+
+.success-message {
+    margin-top: 1rem;
+    color: #4FB477;
+    font-weight: bold;
+    text-align: center;
+}
+
+.error-message {
+    margin-top: 1rem;
+    color: #FF7F11;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*select {*/
+/*    appearance: none;*/
+/*    border: 0;*/
+/*    outline: 0;*/
+/*    font: inherit;*/
+/*}*/
+
+/*.select {*/
+/*    position: relative;*/
+/*    display: flex;*/
+/*    width: 20em;*/
+/*    height: 3em;*/
+/*    border-radius: .25em;*/
+/*    overflow: hidden;*/
+/*}*/
+
+/*!* Arrow *!*/
+/*.select::after {*/
+/*    content: '\25BC';*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    right: 0;*/
+/*    padding: 1em;*/
+/*    background-color: #34495e;*/
+/*    transition: .25s all ease;*/
+/*    pointer-events: none;*/
+/*}*/

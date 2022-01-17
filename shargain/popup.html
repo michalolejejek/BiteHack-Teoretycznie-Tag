@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--<h1 class="popup-header">SharGain</h1>-->
+<div class="popup-header">
+    <img src="logo.png" alt="Shargain"/>
+</div>
+<div class="form-wrapper">
+    <div class="form-field">
+        <label class="form-label" for="target-url">Target URL</label>
+        <input class="form-input" type="text" id="target-url" name="target-url"/>
+    </div>
+    <div class="form-field">
+        <label class="form-label" for="target-existing">Add to existing</label>
+        <input class="form-input" type="checkbox" id="target-existing" name="target-existing">
+    </div>
+    <div id="target-name-new">
+        <div class="form-field">
+            <label class="form-label" for="target-name">Target name</label>
+            <input class="form-input" type="text" id="target-name" name="target-name"/>
+        </div>
+        <div class="form-field">
+            <label class="form-label" for="target-notifications">Enable notifications</label>
+            <input class="form-input" type="checkbox" id="target-notifications" name="target-notifications">
+        </div>
+        <div class="form-field" id="channel-dropdown">
+            <label class="form-label" for="target-channel">
+                Channel
+            </label>
+            <div class="select">
+                <select class="form-input" id="target-channel" name="target-channel">
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="form-field" id="target-name-existing">
+        <label class="form-label" for="target-name-select">
+            Target name
+        </label>
+        <div class="select">
+            <select class="form-input channel" id="target-name-select" name="target-name-select">
+            </select>
+        </div>
+    </div>
+
+    <button id="send-button">Add target</button>
+
+    <div id="success-message" class="success-message" style="display: none">Target added successfully</div>
+    <div id="error-message" class="error-message" style="display: none">Error occurred, couldn't add target</div>
+</div>
+
+<script src="axios.min.js"></script>
+<script src="popup.js"></script>
+</body>
+</html>
